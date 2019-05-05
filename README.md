@@ -10,5 +10,6 @@
    Mise en place du refatoring autour de la dimension du Vaisseau (on met Dimension dimension au lieu de int longueur et int hauteur)
    Mise à jour du diagramme de classe
 ## Diagramme de classes
-
+   ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/spaceInvadersDiagramClass.ucls)
 ## Nuage de mots
+  
