@@ -16,7 +16,10 @@
 
 # Semaine du 06/05 au 10/05
 ## Description du travail effectué
+   Ajouter la vitesse au Vaisseau sans régression de comportement
+   Faire en sorte que le déplacement se fasse correctement pour une vitesse quelconque
    Intégration du moteur graphique
+   Refactoring de la classe SpaceInvaders en déplaçant les constantes dans la classe Constante
 
 ## Diagramme de classes
 
