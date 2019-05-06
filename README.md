@@ -12,4 +12,4 @@
 ## Diagramme de classes
    ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/spaceInvadersDiagramClass.png)
 ## Nuage de mots
-  
+   ![alt text](
