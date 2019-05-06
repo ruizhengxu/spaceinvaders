@@ -20,7 +20,8 @@
    Faire en sorte que le déplacement se fasse correctement pour une vitesse quelconque
    Intégration du moteur graphique
    Refactoring de la classe SpaceInvaders en déplaçant les constantes dans la classe Constante
-
+   Création d'une nouvelle classe Sprite
+   
 ## Diagramme de classes
 
 
