@@ -10,6 +10,18 @@
    Mise en place du refatoring autour de la dimension du Vaisseau (on met Dimension dimension au lieu de int longueur et int hauteur)
    Mise à jour du diagramme de classe
 ## Diagramme de classes
-   ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/spaceInvadersDiagramClass.ucls)
+   ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/spaceInvadersDiagramClass.png)
 ## Nuage de mots
-  
+   ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/spaceinvadersWordCloud.png)
+
+# Semaine du 06/05 au 10/05
+## Description du travail effectué
+   Ajouter la vitesse au Vaisseau sans régression de comportement
+   Faire en sorte que le déplacement se fasse correctement pour une vitesse quelconque
+   Intégration du moteur graphique
+   Refactoring de la classe SpaceInvaders en déplaçant les constantes dans la classe Constante
+
+## Diagramme de classes
+
+
+## Nuage de mots
