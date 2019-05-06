@@ -21,6 +21,7 @@
    Intégration du moteur graphique
    Refactoring de la classe SpaceInvaders en déplaçant les constantes dans la classe Constante
    Création d'une nouvelle classe Sprite
+   Refactoring de la classe Vaisseau
    
 ## Diagramme de classes
 
