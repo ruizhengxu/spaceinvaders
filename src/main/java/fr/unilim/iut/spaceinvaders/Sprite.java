@@ -1,13 +1,16 @@
 package fr.unilim.iut.spaceinvaders;
 
-public class Sprite {
+public abstract class Sprite {
 
-	protected Position origine;
 	protected Dimension dimension;
+	protected Position origine;
 	protected int vitesse;
 
-	public Sprite() {
+	public Sprite(Dimension dimension, Position origine, int vitesse) {
 		super();
+		this.dimension = dimension;
+		this.origine = origine;
+		this.vitesse = vitesse;
 	}
 
 	public Dimension getDimension() {
