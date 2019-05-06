@@ -12,7 +12,7 @@
 ## Diagramme de classes
    ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/spaceInvadersDiagramClass.png)
 ## Nuage de mots
-   ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/spaceinvadersWordCloud.png)
+   ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/imageWordCloud/spaceinvadersWordCloud.png)
 
 # Semaine du 06/05 au 10/05
 ## Description du travail effectué
