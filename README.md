@@ -24,6 +24,7 @@
    - Refactoring de la classe Vaisseau
    
 ## Diagramme de classes
-
+   ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/imageDiagramClass/spaceInvadersDiagramClass2.png)
 
 ## Nuage de mots
+   ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/imageWordCloud/spaceinvadersWordCloud2.png)
