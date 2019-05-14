@@ -36,7 +36,7 @@
 # Semaine du 13/05 au 17/05
 ## Description du travail effectué
    * Tirer un missile en TDD : 
-   ... Ecrire un premier un test (cas normal de tirerUnMissile)
+   ⋅⋅⋅Ecrire un premier un test (cas normal de tirerUnMissile)
 
 ## Diagramme de classes
 
