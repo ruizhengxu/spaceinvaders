@@ -35,8 +35,20 @@
 
 # Semaine du 13/05 au 17/05
 ## Description du travail effectué
-   * Tirer un missile en TDD
-   ⋅⋅⋅Ecrire un premier un test (cas normal de tirerUnMissile)
+   ### Tirer un missile en TDD 
+   * Ecrire un premier un test (cas normal de tirerUnMissile)
+   * Ajout de la méthode tirerUnMissile dans la classe Vaisseau, SpaceInvaders
+   * Ajout de la méthode aUnMissileQuiOccupeLaPosition, aUnMissle et aUnVaisseauQuiOccupeLaPosition dans SpaceInvaders
+   * Création de la classe Missile qui hérite de Sprite et de son constructeur
+   * Ajout de test pour le missile lorsque il dépasse l'espace jeu
+   
+   ### Intégration de la missile
+   * Ajout de la méthode dessinerUnMissile
+   * Création d'un misssile lorsque l'utilisateur appuie sur ESPACE
+   
+   ### Faire déplacer le missile à la verticale de manière autonome
+   * Création de la classe enum Direction
+   * Refactoring de la classe Sprite sur les méthodes se déplacer à gauche ou à droite
 
 ## Diagramme de classes
 
