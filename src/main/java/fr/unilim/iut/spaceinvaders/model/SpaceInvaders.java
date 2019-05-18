@@ -1,4 +1,4 @@
-package fr.unilim.iut.spaceinvaders;
+package fr.unilim.iut.spaceinvaders.model;
 
 import fr.unilim.iut.spaceinvaders.moteurjeu.Commande;
 import fr.unilim.iut.spaceinvaders.moteurjeu.Jeu;
@@ -134,6 +134,9 @@ public class SpaceInvaders implements Jeu{
 		if (commandeUser.tir && !this.aUnMissile()) {
 			tirerUnMissile(new Dimension(Constante.MISSILE_LONGUEUR, Constante.MISSILE_HAUTEUR), Constante.MISSILE_VITESSE);
 		}
+		if(this.aUnMissile()) {
+			this.deplacerMissile();
+		}
 	}
 
 
@@ -158,11 +161,9 @@ public class SpaceInvaders implements Jeu{
 
 	public void deplacerMissile() {
 		this.missile.deplacerVerticalementVers(Direction.HAUT_ECRAN);
-		if(this.missile.origine.ordonnee()+this.hauteur == this.hauteur)
+		if(this.missile.origine.ordonnee()+this.hauteur <= this.hauteur)
 			this.missile=null;
 		
 	}
-	
-	
 	
 }
