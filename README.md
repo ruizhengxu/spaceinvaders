@@ -59,7 +59,7 @@
    * Implémentation de la méthode évoluer pour que l'envahisseur fasse des aller-retour dans le jeu
 
 ## Diagramme de classes
-
+   ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/imageDiagramClass/spaceInvadersDiagramClass3.png)
 
 ## Nuage de mots
 
