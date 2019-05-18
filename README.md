@@ -49,6 +49,14 @@
    ### Faire déplacer le missile à la verticale de manière autonome
    * Création de la classe enum Direction
    * Refactoring de la classe Sprite sur les méthodes se déplacer à gauche ou à droite
+   * Implémentation de la méthode evoluer pour que le missile déplace automatiquement
+   
+   ### Création de nouveau package model
+   
+   ### Création de nouvelle classe Envahisseur
+   * Implémentation des nouveaux tests pour l'envahisseur
+   * Génération des nouvelles méthodes(positionner un nouveau envahisseur, déplacer l'envahisseur) pour faire passer les tests
+   * Implémentation de la méthode évoluer pour que l'envahisseur fasse des aller-retour dans le jeu
 
 ## Diagramme de classes
 
