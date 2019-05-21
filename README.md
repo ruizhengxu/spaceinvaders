@@ -62,4 +62,4 @@
    ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/imageDiagramClass/spaceInvadersDiagramClass3.png)
 
 ## Nuage de mots
-
+   ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/imageWordCloud/spaceinvadersWordCloud3.png)
