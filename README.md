@@ -63,3 +63,15 @@
 
 ## Nuage de mots
    ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/imageWordCloud/spaceinvadersWordCloud3.png)
+
+# Semaine du 20/05 au 25/05
+## Description du travail effectué
+   ### Création de nouvelle classe Collision
+   * Implémentation des nouveaux tests pour gérer les collisions entre le missile et l'envahisseur
+   * Implémentation de la méthode déplacerMissile pour contrôler la collision
+
+## Diagramme de classes
+
+
+
+## Nuage de mots
