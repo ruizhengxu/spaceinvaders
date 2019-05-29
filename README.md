@@ -71,7 +71,7 @@
    * Implémentation de la méthode déplacerMissile pour contrôler la collision
 
 ## Diagramme de classes
-
-
-
+   ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/imageDiagramClass/spaceInvadersDiagramClass4.png)
+   
 ## Nuage de mots
+   ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/imageWordCloud/spaceinvadersWordCloud4.png)
