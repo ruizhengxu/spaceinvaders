@@ -165,7 +165,9 @@ public class SpaceInvaders implements Jeu{
 	}
 
 	public boolean etreFini() {
-		// Le jeu n'est jamais fini
+		if(null == this.vaisseau) {
+			return true;
+		}
 		return false;
 	}
 	
@@ -196,6 +198,7 @@ public class SpaceInvaders implements Jeu{
 		if(this.aUnEnvahisseur() && this.aUnMissile() && collision.detecterCollision(this.missile, this.envahisseur)) {
 			this.envahisseur = null;
 			this.missile = null;
+			this.vaisseau = null;
 		}
 	}
 

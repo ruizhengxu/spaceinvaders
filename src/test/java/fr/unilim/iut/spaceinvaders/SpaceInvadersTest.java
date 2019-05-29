@@ -476,8 +476,8 @@ public class SpaceInvadersTest {
 	     "...............\n" + 
 	     "...............\n" + 
 	     "...............\n" + 
-	     "......VVV......\n" + 
-	     "......VVV......\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+	     "...............\n" + 
+	     "...............\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
 	}
 	
 	@Test
@@ -503,8 +503,8 @@ public class SpaceInvadersTest {
 	     "...............\n" + 
 	     "...............\n" + 
 	     "...............\n" + 
-	     "......VVV......\n" + 
-	     "......VVV......\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+	     "...............\n" + 
+	     "...............\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
 	}
 	
 }
