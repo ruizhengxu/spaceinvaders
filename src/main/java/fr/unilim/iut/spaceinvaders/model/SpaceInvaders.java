@@ -13,11 +13,16 @@ public class SpaceInvaders implements Jeu{
     Vaisseau vaisseau;
     Missile missile;
     Envahisseur envahisseur;
+    Direction directionEnvahisseur;
+    Collision collision;
+    
     
 
     public SpaceInvaders(int longueur, int hauteur) {
     	this.longueur = longueur;
     	this.hauteur = hauteur;
+    	this.directionEnvahisseur = Direction.DROITE;
+    	this.collision = new Collision();
     }
     
     public Vaisseau getVaisseau() {
@@ -153,26 +158,10 @@ public class SpaceInvaders implements Jeu{
 		if(this.aUnMissile()) {
 			this.deplacerMissile();
 		}
-		
-		boolean deplacerGauche = true;
-		boolean deplacerDroite = false;
-		
 		if(this.aUnEnvahisseur()) {
-			if(deplacerGauche) {
-				this.deplacerEnvahisseurVersLaGauche();
-				if(envahisseur.origine.x < 0) {
-					deplacerGauche = false;
-					deplacerDroite = true;
-				}
-			}
-			if(deplacerDroite) {
-				this.deplacerEnvahisseurVersLaDroite();
-				if(envahisseur.abscisseLaPlusADroite() == longueur) {
-					deplacerDroite = false;
-					deplacerGauche = true;
-				}
-			}
+			this.deplacerEnvahisseur();
 		}
+		
 	}
 
 	public boolean etreFini() {
@@ -184,7 +173,7 @@ public class SpaceInvaders implements Jeu{
 		Position positionVaisseau = new Position(this.longueur/2,this.hauteur-1);
 		Dimension dimensionVaisseau = new Dimension(Constante.VAISSEAU_LONGUEUR, Constante.VAISSEAU_HAUTEUR);
 		
-		Position positionEnvahisseur = new Position(this.longueur/2, this.hauteur-(this.hauteur-Constante.ENVAHISSEUR_HAUTEUR));
+		Position positionEnvahisseur = new Position(this.longueur/2, 80);//this.hauteur-(this.hauteur-Constante.ENVAHISSEUR_HAUTEUR));
 		Dimension dimensionEnvahisseur = new Dimension(Constante.ENVAHISSEUR_LONGUEUR, Constante.ENVAHISSEUR_HAUTEUR);
 		
 		positionnerUnNouveauVaisseau(dimensionVaisseau, positionVaisseau, Constante.VAISSEAU_VITESSE);
@@ -201,9 +190,13 @@ public class SpaceInvaders implements Jeu{
 
 	public void deplacerMissile() {
 		this.missile.deplacerVerticalementVers(Direction.HAUT_ECRAN);
-		if(this.missile.ordonneeLaPlusHaute() <= 0)
+		if(this.missile.ordonneeLaPlusHaute() <= 0) {
 			this.missile=null;
-		
+		}
+		if(this.aUnEnvahisseur() && this.aUnMissile() && collision.detecterCollision(this.missile, this.envahisseur)) {
+			this.envahisseur = null;
+			this.missile = null;
+		}
 	}
 
 	public void positionnerUnNouveauEnvahisseur(Dimension dimension, Position position, int i) {
@@ -223,22 +216,33 @@ public class SpaceInvaders implements Jeu{
 
 		envahisseur = new Envahisseur(dimension,position,i);
 	}
-
-	public void deplacerEnvahisseurVersLaDroite() {
-		if (envahisseur.abscisseLaPlusADroite() < (longueur - 1)) {
-			envahisseur.deplacerHorizontalementVers(Direction.DROITE);
-			if (!estDansEspaceJeu(envahisseur.abscisseLaPlusADroite(), envahisseur.ordonneeLaPlusHaute())) {
-				envahisseur.positionner(longueur - envahisseur.getDimension().longueur(), envahisseur.ordonneeLaPlusHaute());
+	
+	public void deplacerEnvahisseur() {
+		if(envahisseur.abscisseLaPlusAGauche() == 0 || envahisseur.abscisseLaPlusADroite() == this.longueur - 1) {
+			if(this.directionEnvahisseur.equals(Direction.DROITE)) {
+				this.directionEnvahisseur = Direction.GAUCHE;
+			}
+			else {
+				this.directionEnvahisseur = Direction.DROITE;
 			}
 		}
+		if(envahisseur.abscisseLaPlusADroite() < (longueur - 1) || 0 < envahisseur.abscisseLaPlusAGauche()) {
+			envahisseur.deplacerHorizontalementVers(this.directionEnvahisseur);
+		}
+		positionnerEnvahisseurSiHorsEspaceJeu();
 	}
 
-	public void deplacerEnvahisseurVersLaGauche() {
-		if (0 < envahisseur.abscisseLaPlusAGauche())
-			envahisseur.deplacerHorizontalementVers(Direction.GAUCHE);
+	private void positionnerEnvahisseurSiHorsEspaceJeu() {
+		
+		if (!estDansEspaceJeu(envahisseur.abscisseLaPlusADroite(), envahisseur.ordonneeLaPlusHaute())) {
+			envahisseur.positionner(longueur - envahisseur.getDimension().longueur(), envahisseur.ordonneeLaPlusHaute());
+		}
 		if (!estDansEspaceJeu(envahisseur.abscisseLaPlusAGauche(), envahisseur.ordonneeLaPlusHaute())) {
 			envahisseur.positionner(0, envahisseur.ordonneeLaPlusHaute());
 		}
+		
 	}
+	
+	
 	
 }
