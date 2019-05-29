@@ -59,7 +59,19 @@
    * Implémentation de la méthode évoluer pour que l'envahisseur fasse des aller-retour dans le jeu
 
 ## Diagramme de classes
-
+   ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/imageDiagramClass/spaceInvadersDiagramClass3.png)
 
 ## Nuage de mots
+   ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/imageWordCloud/spaceinvadersWordCloud3.png)
 
+# Semaine du 20/05 au 25/05
+## Description du travail effectué
+   ### Création de nouvelle classe Collision
+   * Implémentation des nouveaux tests pour gérer les collisions entre le missile et l'envahisseur
+   * Implémentation de la méthode déplacerMissile pour contrôler la collision
+
+## Diagramme de classes
+   ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/imageDiagramClass/spaceInvadersDiagramClass4.png)
+   
+## Nuage de mots
+   ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/imageWordCloud/spaceinvadersWordCloud4.png)
