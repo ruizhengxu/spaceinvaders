@@ -3,22 +3,11 @@ package fr.unilim.iut.spaceinvaders.model;
 public class Collision {
 	
 	public boolean detecterCollision(Missile missile, Envahisseur envahisseur) {
-		return(this.collisionAbscisse(missile, envahisseur) && this.collisionOrdonnee(missile, envahisseur));
-		/*return ((this.collisionAbscisseDroite(missile, envahisseur) || 
+		return ((this.collisionAbscisseDroite(missile, envahisseur) || 
 				this.collisionAbscisseGauche(missile, envahisseur)) &&
 				(this.collisionOrdonneeEnvahisseur(missile, envahisseur) ||
 						this.collisionOrdonneeBasse(missile, envahisseur) ||
-						this.collisionOrdonneeHaute(missile, envahisseur)) );*/
-	}
-	
-	private boolean collisionAbscisse(Missile missile, Envahisseur envahisseur) {
-		return(missile.abscisseLaPlusAGauche() <= envahisseur.abscisseLaPlusADroite() &&
-				missile.abscisseLaPlusADroite() >= envahisseur.abscisseLaPlusAGauche());
-	}
-	
-	private boolean collisionOrdonnee(Missile missile, Envahisseur envahisseur) {
-		return(missile.ordonneeLaPlusBasse() <= envahisseur.ordonneeLaPlusHaute() &&
-				missile.ordonneeLaPlusHaute() >= envahisseur.ordonneeLaPlusBasse());
+						this.collisionOrdonneeHaute(missile, envahisseur)) );
 	}
 	
 	private boolean collisionOrdonneeEnvahisseur(Missile missile, Envahisseur envahisseur) {

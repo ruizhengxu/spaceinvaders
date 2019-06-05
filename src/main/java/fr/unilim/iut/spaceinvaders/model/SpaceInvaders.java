@@ -33,11 +33,22 @@ public class SpaceInvaders implements Jeu{
 		return this.missile;
 	}
     
+    public void setMissile(Missile missile) {
+		this.missile = missile;
+	}
+    
     public Envahisseur getEnvahisseur() {
 		return this.envahisseur;
 	}
     
-
+    public void setEnvahisseur(Envahisseur envahisseur) {
+		this.envahisseur = envahisseur;
+	}
+    
+    public Collision getCollision() {
+    	return this.collision;
+    }
+    
 	public String recupererEspaceJeuDansChaineASCII() {
 		StringBuilder espaceDeJeu = new StringBuilder();
         for (int y = 0; y < hauteur; y++) {
@@ -146,12 +157,11 @@ public class SpaceInvaders implements Jeu{
 		
 	}
 
-
 	public void evoluer(Commande commandeUser) {
 		
 		this.deplacer(commandeUser);
 		
-		if (commandeUser.tir && !this.aUnMissile()) {
+		if (commandeUser.tir && ! this.aUnMissile()) {
 			tirerUnMissile(new Dimension(Constante.MISSILE_LONGUEUR, Constante.MISSILE_HAUTEUR), Constante.MISSILE_VITESSE);
 		}
 		
@@ -175,7 +185,7 @@ public class SpaceInvaders implements Jeu{
 		Position positionVaisseau = new Position(this.longueur/2,this.hauteur-1);
 		Dimension dimensionVaisseau = new Dimension(Constante.VAISSEAU_LONGUEUR, Constante.VAISSEAU_HAUTEUR);
 		
-		Position positionEnvahisseur = new Position(this.longueur/2, 80);//this.hauteur-(this.hauteur-Constante.ENVAHISSEUR_HAUTEUR));
+		Position positionEnvahisseur = new Position(this.longueur/2, 79);
 		Dimension dimensionEnvahisseur = new Dimension(Constante.ENVAHISSEUR_LONGUEUR, Constante.ENVAHISSEUR_HAUTEUR);
 		
 		positionnerUnNouveauVaisseau(dimensionVaisseau, positionVaisseau, Constante.VAISSEAU_VITESSE);
@@ -188,7 +198,7 @@ public class SpaceInvaders implements Jeu{
 			   throw new MissileException("Pas assez de hauteur libre entre le vaisseau et le haut de l'espace jeu pour tirer le missile");
 							
 		   this.missile = this.vaisseau.tirerUnMissile(dimensionMissile,vitesseMissile);
-    }
+	}
 
 	public void deplacerMissile() {
 		this.missile.deplacerVerticalementVers(Direction.HAUT_ECRAN);
@@ -245,7 +255,5 @@ public class SpaceInvaders implements Jeu{
 		}
 		
 	}
-	
-	
 	
 }

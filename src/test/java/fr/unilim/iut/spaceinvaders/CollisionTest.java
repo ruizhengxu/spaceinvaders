@@ -7,5 +7,7 @@ public class CollisionTest {
 	@Test
 	public void test_CollisionEntreDeuxSprites() {
 		
+		
+		
 	}
 }

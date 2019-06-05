@@ -1,6 +1,7 @@
 package fr.unilim.iut.spaceinvaders.model;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
@@ -28,6 +29,17 @@ public class DessinSpaceInvaders implements DessinJeu {
 			Envahisseur envahisseur = this.jeu.getEnvahisseur();
 			this.dessinerUnEnvahisseur(envahisseur, im);
 		}
+		if(this.jeu.etreFini()) {
+			this.dessinerMessageDeFin(im);
+		}
+	}
+
+	private void dessinerMessageDeFin(BufferedImage im) {
+		Graphics2D crayon = (Graphics2D) im.getGraphics();
+		Font font = new Font("Arial", Font.PLAIN, 15);
+		crayon.setFont(font);
+		crayon.setColor(Color.black);
+		crayon.drawString("F I N   D E   L A   P A R T I E", 210, 400);
 	}
 
 	private void dessinerUnVaisseau(Vaisseau vaisseau, BufferedImage im) {
@@ -42,7 +54,7 @@ public class DessinSpaceInvaders implements DessinJeu {
 	private void dessinerUnMissile(Missile missile, BufferedImage im) {
 		Graphics2D crayon = (Graphics2D) im.getGraphics();
 
-		crayon.setColor(Color.blue);
+		crayon.setColor(Color.green);
 		crayon.fillRect(missile.abscisseLaPlusAGauche(), missile.ordonneeLaPlusBasse(), missile.dimension.longueur, missile.dimension.hauteur);
 	}
 	
