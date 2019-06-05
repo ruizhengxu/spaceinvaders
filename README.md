@@ -75,3 +75,23 @@
    
 ## Nuage de mots
    ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/imageWordCloud/spaceinvadersWordCloud4.png)
+
+# Semaine du 27/05 au 31/05
+## Description du travail effectué
+
+   ### Fin de la fonctionnalité colission
+   * La fonctionnalité colission est finie
+   * Implémentation des nouveaux tests pour la collision en utilisant assertTrue() et assertFalse()
+   
+   ### Implémentation de la fonctionnalité fin de la partie
+   * Implémention de la classe DessinSpaceinvaders et de la classe Spaceinvaders pour gérer la fin de la partie
+   * La partie est finie lorsque le missile détruit l'envahisseur, donc tous les sprites sont détruits
+   * EtreFini() retourne true lorsque notre vaisseau est null
+   * Dessin d'un text qui annonce la fin de la partie avec Graphic2D
+
+## Diagramme de classes
+   ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/imageDiagramClass/spaceInvadersDiagramClass5.png)
+   
+## Nuage de mots
+   ![alt text](https://github.com/ruizhengxu/spaceinvaders/blob/master/imageWordCloud/spaceinvadersWordCloud5.png)
+
